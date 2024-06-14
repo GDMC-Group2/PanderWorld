@@ -1,3 +1,4 @@
+from inspect import getblock
 from gdpc import __url__, Editor, Block, geometry
 from gdpc.exceptions import InterfaceConnectionError, BuildAreaNotSetError
 import time
@@ -44,19 +45,20 @@ def underground_main_enter(x,y,z,h,biome):
 		for y in range (y-4,y):
 			z=z1
 			for z in range (z,z+31):
-				if biome=="minecraft:desert":
+				block=editor.getBlock((x,y-1,z))
+				if biome=="minecraft:desert"and block.id=="minecraft:dirt":
 					editor.placeBlock((x, y-1, z), Block("minecraft:sandstone"))    
-				elif biome=="minecraft:snowy_tundra":
+				elif biome=="minecraft:snowy_tundra"and block.id=="minecraft:dirt":
 					editor.placeBlock((x, y-1, z), Block("minecraft:snow_block"))                   
-				elif biome=="minecraft:frozen_river":
+				elif biome=="minecraft:frozen_river"and block.id=="minecraft:dirt":
 					editor.placeBlock((x, y-1, z), Block("minecraft:snow_block"))    
-				elif biome=="minecraft:snowy_plains":
+				elif biome=="minecraft:snowy_plains"and block.id=="minecraft:dirt":
 					editor.placeBlock((x, y-1, z), Block("minecraft:snow_block"))  
-				elif biome=="minecraft:snowy_taiga":
+				elif biome=="minecraft:snowy_taiga"and block.id=="minecraft:dirt":
 					editor.placeBlock((x, y-1, z), Block("minecraft:snow_block"))  
-				elif biome=="minecraft:snowy_beach":
+				elif biome=="minecraft:snowy_beach"and block.id=="minecraft:dirt":
 					editor.placeBlock((x, y-1, z), Block("minecraft:snow_block"))
-				elif biome=="minecraft:mountains":
+				elif biome=="minecraft:mountains"and block.id=="minecraft:dirt":
 					editor.placeBlock((x, y-1, z), Block("minecraft:stone"))
 	
 	"""
