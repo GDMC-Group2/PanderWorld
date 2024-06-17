@@ -12,3 +12,5 @@ e.g. setbuildarea 0 0 0 100 100 100  is not allowed.
 ![Example](images/1.png)
 ![Example](images/2.png)
 ![Example](images/3.png)
+
+Members:  Yiyang Liu, Shuang Zhao, Ryosuke Hasegawa, Ruck Thawonmas (all from Ritsumeikan University; https://www.ice.ci.ritsumei.ac.jp/)
