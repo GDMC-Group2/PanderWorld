@@ -60,6 +60,10 @@ def underground_main_enter(x,y,z,h,biome):
 					editor.placeBlock((x, y-1, z), Block("minecraft:snow_block"))
 				elif biome=="minecraft:mountains"and block.id=="minecraft:dirt":
 					editor.placeBlock((x, y-1, z), Block("minecraft:stone"))
+				elif biome=="minecraft:badlands"and block.id=="minecraft:dirt":
+					editor.placeBlock((x, y-1, z), Block("minecraft:terracotta"))
+
+					
 	
 	"""
 	x1=x;y1=y;z1=z;

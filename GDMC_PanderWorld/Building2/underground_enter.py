@@ -13515,4 +13515,6 @@ def underground_enter(x,y,z,biome):
                     
                 elif biome=="minecraft:mountains" and block.id=="minecraft:grass_block":
                     editor.placeBlock((x, y+1, z), Block("minecraft:stone"))
-                    
+
+                elif biome=="minecraft:badlands"and block.id=="minecraft:grass_block":
+                    editor.placeBlock((x, y+1, z), Block("minecraft:terracotta"))                    
